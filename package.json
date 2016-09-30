@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Resolve files from node modules",
   "main": "distribution/index.js",
+  "files": ["distribution/"],
   "scripts": {
     "start": "npm run test -- --watch",
     "build": "babel source -d distribution",
