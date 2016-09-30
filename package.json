@@ -10,7 +10,8 @@
     "docs": "documentation readme \"source/index.js\" --section \"API\" --github",
     "lint": "xo source/*.js",
     "pretest": "npm run build && npm run deps && npm run lint && npm run types",
-    "test": "ava",
+    "test": "npm run ava",
+    "ava": "ava",
     "types": "if ! [[ $OSTYPE == 'win32' ]]; then flow check; fi",
     "update": "tipi update"
   },

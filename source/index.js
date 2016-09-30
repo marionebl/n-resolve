@@ -64,11 +64,11 @@ async function nResolve(id: string, options?: Options): Promise<string> { // esl
 	}
 
 	const parsed = path.parse(moduleFilePath);
+	const ext = parsed.ext === '.js' ? '' : parsed.ext;
 
 	return path.format({
 		dir: parsed.dir,
-		name: parsed.name,
-		ext: parsed.ext === '.js' ? '' : parsed.ext
+		base: `${parsed.name}${ext}`
 	});
 }
 
