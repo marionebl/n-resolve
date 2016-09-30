@@ -10,10 +10,10 @@
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "docs": "documentation readme \"source/index.js\" --section \"API\" --github",
     "lint": "xo source/*.js",
-    "pretest": "npm run build && npm run deps && npm run lint && npm run types",
+    "pretest": "npm run build && npm run deps && npm run lint",
     "test": "npm run ava",
     "ava": "ava",
-    "types": "test $OSTYPE != 'win32'; then flow check; fi",
+    "types": "flow check",
     "update": "tipi update"
   },
   "ava": {
