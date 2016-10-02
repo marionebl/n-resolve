@@ -3,7 +3,7 @@ const assert = require('assert');
 
 const path = require('path');
 const exists = require('path-exists');
-const isCore = require('node-resolve').isCore;
+const isBuiltin = require('is-builtin-module');
 const merge = require('lodash/fp').merge;
 const plain = require('lodash/fp').isPlainObject;
 
@@ -34,7 +34,7 @@ async function nResolve(id: string, options?: Options): Promise<string> { // esl
 		return s.modules[id];
 	}
 
-	if (isCore(id)) {
+	if (isBuiltin(id)) {
 		return id;
 	}
 
