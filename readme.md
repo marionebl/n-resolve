@@ -115,6 +115,7 @@ nResolve('isomorphic-fetch', {resolveKey: 'browser'})
 
 ## See also
 
+-   [is-builtin-module](https://github.com/sindresorhus/is-builtin-module)
 -   [node-resolve](https://github.com/substack/node-resolve)
 -   [node-browser-resolve](https://github.com/defunctzombie/node-browser-resolve)
 -   [node-modules-path](https://github.com/ember-cli/node-modules-path)
