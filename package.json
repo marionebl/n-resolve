@@ -7,12 +7,12 @@
     "distribution/"
   ],
   "scripts": {
-    "start": "npm run test -- --watch",
+    "start": "flow > /dev/null & npm run test -- --watch",
     "build": "babel source -d distribution",
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "docs": "documentation readme \"source/index.js\" --section \"API\" --github",
     "lint": "xo source/*.js",
-    "pretest": "npm run build && npm run deps && npm run lint",
+    "pretest": "npm run build && npm run deps && npm run lint && npm run types",
     "test": "npm run ava",
     "ava": "ava",
     "types": "flow check",
